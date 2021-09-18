@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Math movements</title>
+</head>
+<body>
+	<h1>Ответ</h1>
+	<h3 id = "mainText"></h3>
+
+<script>
+	var text = document.getElementById("mainText");
+	var mathfunctionfirst = prompt("Введите первое число!");
+	var mathfunctionsignal = prompt("Введите знак функции!(+ или -)");
+    var mathfunctionsecond = prompt("Введите второе число!");
+    var mathfunctionindex = prompt("Введите степень!(от 2 до 3)");
+ 
+ if(mathfunctionsignal ==="*"){
+ 	var result= "error was accured!";
+ }
+ else if(mathfunctionsignal ==="/"){
+ 	var result= "error was accured!";
+ }
+ else{
+ if(mathfunctionindex === "2"){
+  if(mathfunctionsignal === "+"){
+  	var result = mathfunctionfirst**2 + 2*mathfunctionfirst*mathfunctionsecond + mathfunctionsecond**2 +"." + " Это формула квадрата суммы";
+  } else if(mathfunctionsignal === "-"){
+  	var result = mathfunctionfirst**2 - 2*mathfunctionfirst*mathfunctionsecond + mathfunctionsecond**2 +"." + "Это формула квадрата разности";
+  }
+}else if(mathfunctionindex === "3"){
+	  if(mathfunctionsignal === "+"){
+  	var result = mathfunctionfirst**3 + 3*mathfunctionfirst**2 * mathfunctionsecond + 3*mathfunctionfirst * mathfunctionsecond**2 + mathfunctionsecond**3 +"." + " Это формула куба суммы";
+  }
+   else if(mathfunctionsignal === "-"){
+  	var result = mathfunctionfirst**3 - 3*mathfunctionfirst**2 * mathfunctionsecond + 3*mathfunctionfirst * mathfunctionsecond**2 - mathfunctionsecond**3 +"." + "Это формула куба разности";
+  }
+}
+}
+var text = document.getElementById("mainText").innerHTML= result;
+</script>
+</body>
+</html>
